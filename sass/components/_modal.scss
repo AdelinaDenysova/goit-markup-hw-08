@@ -1,0 +1,157 @@
+.backdrop.is-hidden {
+  .modal {
+    transform: translateX(1000px) rotate(180deg);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  min-height: 581px;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) rotate(0);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  @extend %align-items;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__title {
+  margin-bottom: 12px;
+  @include font(20px, 700, 1.15, 0.03em);
+  text-align: center;
+  color: var(--second-title-color);
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.input__box {
+  margin-bottom: 10px;
+  @include font(12px, 400, 1.17, 0.01em);
+  color: var(--main-text-color);
+}
+
+.input__text {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.input__wrap {
+  position: relative;
+}
+
+.input__field {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
+
+.input__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  fill: var(--modal-icon-color);
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-form-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.input__area {
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    @include font(12px, 400, 1.17);
+    color: var(--placeholder-color);
+  }
+}
+
+.policy {
+  @extend %align-items;
+}
+
+.policy__check:checked + .policy__text {
+  .policy__item {
+    background-color: var(--accent-color);
+    border: none;
+  }
+}
+
+.policy__text {
+  @extend %align-items;
+  margin-bottom: 30px;
+  @include font(14px, 400, 1.71, 0.03em);
+}
+
+.policy__item {
+  @extend %align-items;
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy__icon {
+  fill: #ffffff;
+}
+
+.policy__link {
+  text-decoration-line: underline;
+  color: $accent-color;
+}

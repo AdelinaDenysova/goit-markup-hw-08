@@ -1,0 +1,30 @@
+.about__list {
+  display: flex;
+}
+
+.about__item {
+  width: 270px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.about__icon {
+  @extend %align-items;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: $main-content-background-color;
+}
+
+.about__title {
+  margin-bottom: 10px;
+  @include font(14px, 700, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: $second-title-color;
+}
+
+.about__text {
+  @include font(14px, 400, 1.71, 0.03em);
+  color: $main-text-color;
+}

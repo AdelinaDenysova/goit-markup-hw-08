@@ -1,0 +1,24 @@
+.logo {
+  display: block;
+  font-family: $logo-font;
+  @include font(26px, 700, 1.19, 0.03em);
+  color: $accent-color;
+}
+
+.logo__header {
+  margin-right: 90px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.logo__footer {
+  margin-bottom: 20px;
+}
+
+.logo__header--black-part {
+  color: $header-logo-second-part-color;
+}
+
+.logo__footer--white-part {
+  color: $footer-logo-second-part-color;
+}

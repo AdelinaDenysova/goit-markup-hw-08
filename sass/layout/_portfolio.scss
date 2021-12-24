@@ -1,0 +1,69 @@
+.filter__list {
+  @extend %align-items;
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.portfolio__item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__about {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 63px 24px;
+  @include font(18px, 400, 1.56, 0.03em);
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  overflow: hidden;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .portfolio__item:hover & {
+    transform: translateY(0);
+  }
+}
+
+.portfolio__box {
+  display: block;
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.portfolio__name {
+  @include font(18px, 700, 2, 0.06em);
+  color: $third-title-color;
+}
+
+.portfolio__description {
+  @include font(16px, 400, 1.87, 0.03em);
+  color: $main-text-color;
+}

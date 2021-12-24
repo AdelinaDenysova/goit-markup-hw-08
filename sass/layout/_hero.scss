@@ -1,0 +1,28 @@
+.hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $section-background-color;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background-image.jpg);
+}
+
+.hero__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  padding: 200px 0;
+  margin: 0 auto;
+}
+
+.hero__title {
+  display: block;
+  margin-bottom: 30px;
+  @include font(44px, 900, 1.36, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: $main-title-color;
+}
