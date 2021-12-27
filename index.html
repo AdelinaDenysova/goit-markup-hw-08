@@ -19,7 +19,7 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
+    <!-- <header class="header">
         <div class="container header__wrap">
             <nav class="header__navigation">
                 <a class="logo__header logo link" href="index.html" lang="en">Web<span class="logo__header--black-part">Studio</span></a>
@@ -40,7 +40,7 @@
                 </ul>
             </div>
         </div>
-    </header>
+    </header> -->
 
     <!-- Main content section -->
     <main>
@@ -103,27 +103,42 @@
             <div class="container">
             <h2 class="description__title">Чем мы занимаемся</h2>
             <ul class="list description__list">
-               <li class="description__item">
-                   <img src="./images/box-1.jpg" 
+                <li class="description__item">
+                    <img 
+                        srcset="
+                        ./images/box-1.jpg 1x,
+                        ./images/box-1-2x.jpg 2x
+                        "
+                        src="./images/box-1-2x.jpg" 
                         alt="программист пишет код" 
                         width="370">
                     <p class="description__text">Десктопные приложения</p>
                 </li>
                 <li class="description__item">
-                    <img src="./images/box-2.jpg" 
+                    <img 
+                        srcset="
+                        ./images/box-2.jpg 1x,
+                        ./images/box-2-2x.jpg 2x
+                        "
+                        src="./images/box-2-2x.jpg" 
                         alt="дизайнер рисует макет" 
                         width="370">
                     <p class="description__text">Мобильные приложения</p>
                 </li>
                 <li class="description__item">
-                    <img src="./images/box-3.jpg" 
+                    <img 
+                        srcset="
+                        ./images/box-3.jpg 1x,
+                        ./images/box-3-2x.jpg 2x
+                        "
+                        src="./images/box-3-2x.jpg" 
                         alt="дизайнер выбирает цвет из палитры" 
                         width="370">
                     <p class="description__text">Дизайнерские решения</p>
                 </li>
             </ul>
             </div>
-</section>
+            </section>
 
         <!-- Team section -->
         <section class="section team">
@@ -131,17 +146,38 @@
             <h2 class="team__title">Наша команда</h2>
             <ul class="list team__list">
                 <li class="team__item">
-                    <img class="team__photo" src="./images/employee-1.jpg" alt="фото сотрудника" width="270">
+                    <picture>
+                        <source 
+                            srcset="
+                                ./images/employee-1.jpg 1x,
+                                ./images/employee-1-2x.jpg 2x
+                                " 
+                            media="(min-width: 1200px)">
+                        <source 
+                                srcset="
+                                ./images/employee-1-tab.jpg 1x,
+                                ./images/employee-1-tab-2x.jpg 2x
+                                " 
+                                media="(min-width: 768px)">
+                        <source
+                            srcset="
+                                ./images/employee-1-mob.jpg 1x,
+                                ./images/employee-1-mob-2x.jpg 2x
+                                "
+                            media="(min-width: 480px)"
+                        >
+                        <img class="team__photo" src="./images/employee-1-mob-2x.jpg" alt="фото сотрудника">
+                    </picture>
                     <div class="team__description"> <h3 class="team__name">Игорь Демьяненко</h3>
-                     <p class="team__occupation" lang="en">Product Designer</p> 
-                     <ul class="social__list list">
-                         <li class="social__item">
-                             <a href="" class="social__link social__link--team-colors">
-                                 <svg class="social__icon" width="20" height="20">
-                                     <use href="./images/icons-sprite.svg#icon-instagram"></use>
-                                 </svg>
-                             </a>
-                         </li>
+                        <p class="team__occupation" lang="en">Product Designer</p> 
+                        <ul class="social__list list">
+                            <li class="social__item">
+                                <a href="" class="social__link social__link--team-colors">
+                                    <svg class="social__icon" width="20" height="20">
+                                        <use href="./images/icons-sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         <li class="social__item">
                             <a href="" class="social__link social__link--team-colors">
                                 <svg class="social__icon" width="20" height="20">
@@ -163,11 +199,25 @@
                                 </svg>
                             </a>
                         </li>
-                     </ul>
+                        </ul>
                     </div>
                 </li>
                 <li class="team__item">
-                    <img class="team__photo" src="./images/employee-2.jpg" alt="фото сотрудника" width="270">
+                    <picture>
+                        <source srcset="
+                            ./images/employee-2.jpg 1x,
+                            ./images/employee-2-2x.jpg 2x
+                            " media="(min-width: 1200px)">
+                        <source srcset="
+                            ./images/employee-2-tab.jpg 1x,
+                            ./images/employee-2-tab-2x.jpg 2x
+                            " media="(min-width: 768px)">
+                        <source srcset="
+                            ./images/employee-2-mob.jpg 1x,
+                            ./images/employee-2-mob-2x.jpg 2x
+                            " media="(min-width: 480px)">
+                        <img class="team__photo" src="./images/employee-2-mob-2x.jpg" alt="фото сотрудника">
+                    </picture>
                     <div class="team__description"><h3 class="team__name">Ольга Репина</h3>
                     <p class="team__occupation" lang="en">Frontend Developer</p>
                     <ul class="social__list list">
@@ -203,7 +253,20 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img class="team__photo" src="./images/employee-3.jpg" alt="фото сотрудника" width="270">
+                    <picture>
+                        <source srcset="
+                            ./images/employee-3.jpg 1x,
+                            ./images/employee-3-2x.jpg 2x
+                            " media="(min-width: 1200px)">
+                        <source srcset="
+                            ./images/employee-3-tab.jpg 1x,
+                            ./images/employee-3-tab-2x.jpg 2x
+                            " media="(min-width: 768px)">
+                        <source srcset="
+                            ./images/employee-3-mob.jpg 1x,
+                            ./images/employee-3-mob-2x.jpg 2x
+                            " media="(min-width: 480px)">
+                        <img class="team__photo" src="./images/employee-3-mob-2x.jpg" alt="фото сотрудника">
                     <div class="team__description"><h3 class="team__name">Николай Тарасов</h3>
                     <p class="team__occupation" lang="en">Marketing</p>
                     <ul class="social__list list">
@@ -239,7 +302,20 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img class="team__photo" src="./images/employee-4.jpg" alt="фото сотрудника" width="270">
+                    <picture>
+                        <source srcset="
+                            ./images/employee-4.jpg 1x,
+                            ./images/employee-4-2x.jpg 2x
+                            " media="(min-width: 1200px)">
+                        <source srcset="
+                            ./images/employee-4-tab.jpg 1x,
+                            ./images/employee-4-tab-2x.jpg 2x
+                            " media="(min-width: 768px)">
+                        <source srcset="
+                            ./images/employee-4-mob.jpg 1x,
+                            ./images/employee-4-mob-2x.jpg 2x
+                            " media="(min-width: 480px)">
+                        <img class="team__photo" src="./images/employee-4-mob-2x.jpg" alt="фото сотрудника">
                     <div class="team__description"><h3 class="team__name">Михаил Ермаков</h3>
                     <p class="team__occupation" lang="en">UI Designer</p>
                     <ul class="social__list list">
@@ -391,7 +467,7 @@
         </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal__close-btn" data-modal-close>
                 <svg class="modal__close-icon" width="18" height="18">
@@ -471,8 +547,8 @@
             <button type="submit" class="btn btn--accent-color">Отправить</button>
             </form>
         </div>
-    </div>
+    </div> -->
 
-    <script src="./js/modal.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
 </body>
 </html>

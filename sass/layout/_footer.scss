@@ -2,15 +2,29 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $section-background-color;
+
+  @media screen and (min-width: 1200px) {
+    padding-left: auto;
+    padding-right: auto;
+  }
 }
 
 .footer__wrap {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__meta {
-  margin-right: 70px;
+  text-align: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    text-align: left;
+    margin-bottom: 0;
+  }
 }
 
 .footer__address {
@@ -19,20 +33,28 @@
 
 .footer__map {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   @include font(14px, 400, 1.71, 0.03em);
   color: $footer-text-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__mail {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   @include font(14px, 400, 1.71, 0.03em);
   color: $footer-second-text-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
   }
 }
 
@@ -52,22 +74,35 @@
   @include font(14px, 700, 1.14, 0.03em);
   text-transform: uppercase;
   color: $footer-text-color;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align-last: left;
+  }
 }
 
 .footer__social {
-  margin-right: 93px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .subscripe__form {
-  display: flex;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .subscribe__email-input {
-  display: flex;
-  width: 358px;
+  width: 450px;
   height: 50px;
   margin-right: 12px;
   padding-left: 16px;
+  margin-bottom: 20px;
   color: $footer-text-color;
   background-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -76,8 +111,15 @@
   border-radius: 4px;
   outline: none;
   &::placeholder {
-    @extend %align-items;
     @include font(16px, 400, 1.25, 0.03em);
     color: $footer-placeholder-text;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
   }
 }

@@ -1,8 +1,12 @@
 .logo {
   display: block;
   font-family: $logo-font;
-  @include font(26px, 700, 1.19, 0.03em);
+  @include font(24px, 700, 1.17, 0.03em);
   color: $accent-color;
+
+  @media screen and (min-width: 1200px) {
+    @include font(26px, 700, 1.19, 0.03em);
+  }
 }
 
 .logo__header {
@@ -12,7 +16,12 @@
 }
 
 .logo__footer {
+  text-align: center;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .logo__header--black-part {
