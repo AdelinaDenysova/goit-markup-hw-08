@@ -19,7 +19,7 @@
 <body>
 
     <!-- Header -->
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header__wrap">
             <nav class="header__navigation">
                 <a class="logo__header logo link" href="index.html" lang="en">Web<span class="logo__header--black-part">Studio</span></a>
@@ -39,8 +39,33 @@
                     </svg>+38 096 111 11 11</a></li>
                 </ul>
             </div>
+            <button type="button" class="open_menu_btn">
+                <svg class="header__mob-icon" width="40" height="40">
+                <use href="./images/icons-sprite.svg#icon-menu"></use>
+                </svg>
+            </button>
         </div>
-    </header> -->
+        <div class="mob-menu is-hidden">
+            <div class="container">
+            <button type="button" class="close_menu_btn">
+                <svg class="header__mob-icon" width="40" height="40">
+                    <use href="./images/icons-sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            <ul class="list mob-menu__list">
+                <li class="mob-menu__item"><a class="link mob-menu__link current" href="index.html">Студия</a></li>
+                <li class="mob-menu__item"><a class="link mob-menu__link" href="portfolio.html">Портфолио</a></li>
+                <li class="mob-menu__item"><a class="link mob-menu__link" href="">Контакты</a></li>
+            </ul>
+            <div class="mob-menu__contacts">
+                <ul class="list mob-menu__list">
+                    <li class="mob-menu__item"><a class="link mob-menu__tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                    <li class="mob-menu__item"><a class="link mob-menu__mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Main content section -->
     <main>
@@ -549,6 +574,7 @@
         </div>
     </div> -->
 
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
