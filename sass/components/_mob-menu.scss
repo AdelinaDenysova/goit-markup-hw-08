@@ -1,0 +1,118 @@
+.open_menu_btn {
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 48px;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mob-menu .close_menu_btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.mob-menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mob-menu__link {
+  @include font(25px, 500, 1.18, 0.02em);
+  color: $header-text-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: 480px) {
+    @include font(40px, 500, 1.18, 0.02em);
+  }
+}
+
+.mob-menu__contacts {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+
+.mob-menu__tel {
+  @include font(25px, 500, 1.18, 0.02em);
+  color: $accent-color;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 480px) {
+    @include font(34px, 500, 1.18, 0.02em);
+  }
+}
+
+.mob-menu__mail {
+  @include font(18px, 500, 1.17, 0.02em);
+  color: $header-second-text-color;
+
+  @media screen and (min-width: 480px) {
+    @include font(24px, 500, 1.17, 0.02em);
+  }
+}
+
+.mob-menu__social-list {
+  display: flex;
+}
+
+.mob-menu__social-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.mob-menu__social-link {
+  @include font(10px, 500, 1.22, 0.02em);
+  color: $accent-color;
+
+  @media screen and (min-width: 480px) {
+    @include font(18px, 500, 1.22, 0.02em);
+  }
+}
