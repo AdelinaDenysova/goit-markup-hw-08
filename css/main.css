@@ -1102,14 +1102,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    justify-content: space-around;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__wrap {
-    display: flex;
-    align-items: baseline;
+    justify-content: space-around;
   }
 }
 
@@ -1198,8 +1196,10 @@ img {
   }
 }
 
-.footer__social {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .footer__social {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
