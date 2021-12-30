@@ -1,11 +1,12 @@
 .clients__title {
   margin-bottom: 30px;
-  @include font(36px, 700, 1.17, 0.03em);
+  @include font(28px, 700, 1.18, 0.03em);
   text-align: center;
   color: $second-title-color;
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
+    @include font(36px, 700, 1.17, 0.03em);
   }
 }
 

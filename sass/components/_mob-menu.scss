@@ -2,6 +2,7 @@
   margin-left: auto;
   cursor: pointer;
   border: none;
+  background-color: transparent;
   &:hover,
   &:focus {
     fill: $accent-color;
@@ -45,6 +46,7 @@
   margin-left: auto;
   border: none;
   cursor: pointer;
+  background-color: transparent;
   &:hover,
   &:focus {
     fill: $accent-color;

@@ -432,6 +432,7 @@ img {
   margin-left: auto;
   cursor: pointer;
   border: none;
+  background-color: transparent;
 }
 
 .open_menu_btn:hover, .open_menu_btn:focus {
@@ -479,6 +480,7 @@ img {
   margin-left: auto;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .mob-menu .close_menu_btn:hover, .mob-menu .close_menu_btn:focus {
@@ -946,9 +948,9 @@ img {
 
 .team__title {
   margin-bottom: 30px;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.17;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
   color: #212121;
@@ -957,6 +959,10 @@ img {
 @media screen and (min-width: 1200px) {
   .team__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -1024,9 +1030,9 @@ img {
 
 .clients__title {
   margin-bottom: 30px;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.17;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
   color: #212121;
@@ -1035,6 +1041,10 @@ img {
 @media screen and (min-width: 1200px) {
   .clients__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -1271,12 +1281,6 @@ img {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 768px) {
-  .filter__item {
-    margin-bottom: 55px;
-  }
-}
-
 .portfolio__link {
   text-decoration: none;
 }
@@ -1298,8 +1302,14 @@ img {
   .portfolio__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -30px;
+    margin-top: 30px;
     margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__list {
+    margin-top: 50px;
   }
 }
 
